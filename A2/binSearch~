@@ -1,0 +1,26 @@
+import numpy as np
+import math
+
+def binSearch(x, anArr):
+	found = false
+	sz = np.size(anArr)
+	if sz == 0 :
+		return "error"
+	elif sz == 1:
+		if x == anArr[0] :
+			found = true;
+			return found
+	else:
+		mid = int(math.floor((sz + 1) /2 ))
+		candidate = anArr[mid]
+		if x == candidate :
+			found = true
+			return found
+		else if x < candidate :
+			binSearch[x, anArr[:sz-1]
+		else :
+			binSearch[x, anArr[sz:]
+	
+		
+		
+	

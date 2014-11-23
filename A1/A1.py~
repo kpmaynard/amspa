@@ -1,0 +1,49 @@
+"""
+	Input: 
+		InputFile: the path to the wav file
+	Output:
+		The function should return a numpy array that
+		contains 10 samples of the audio.
+"""
+
+import numpy
+
+from scipy.io.wavfile import read
+
+import sys
+
+
+
+
+def readAudio(inputFile='../../sounds/piano.wav'):
+
+sys.path.append('/home/vagrant/sms-tools/software/models')
+import utilFunctions as UF
+
+print("Input File: ", inputFile)
+(fs, x) = UF.wavread(inputFile)	
+y = x[50000:50010]
+	
+def minMaxAudio(inputFile):
+"""
+Input:
+inputFile: file path to the wav file
+Output:
+A tuple of the minimum and the maximum value of the audio
+samples, like: (min_val, max_val)
+"""
+
+sys.path.append('/home/vagrant/sms-tools/software/models')
+import utilFunctions as UF
+
+print("Input File: ", inputFile)
+(fs, x) = UF.wavread(inputFile)
+min_val = np.min(abs(x))
+max_val = np.max(abs(x))	
+(min_val, max_val)
+
+
+if __name__ == "__main__":
+	main()
+
+	
